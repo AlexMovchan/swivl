@@ -1,0 +1,47 @@
+{
+  "extends": ["airbnb", "airbnb/hooks", "eslint:recommended"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "semi": "error",
+    "no-restricted-properties": [2, {
+      "object": "pow",
+      "property": "pow"
+    }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "camelcase": [0, {"properties": "never"}],
+    "react/no-unescaped-entities": [0],
+    "react/no-multi-comp": 0,
+    "import/default": 0,
+    "import/no-duplicates": 0,
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 2,
+    "comma-dangle": 0,
+    "no-console": 0,
+    "no-alert": 0,
+    "no-debugger": 0,
+    "react/jsx-filename-extension": 0,
+    "no-underscore-dangle": 0,
+    "react/forbid-prop-types": 0,
+    "import/extensions": 0,
+    "react/prefer-stateless-function": [2, { "ignorePureComponents": true }],
+    "global-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/no-danger": 0,
+    "react/sort-comp": 0,
+    "implicit-arrow-linebreak": [0],
+    "operator-linebreak": ["error", "before", { "overrides": { "=": "after" } }],
+    "import/no-cycle": [1],
+    "react/destructuring-assignment": [1, "always"],
+    "react/button-has-type": [0],
+    "react/jsx-one-expression-per-line": [0, { "allow": "single-child" }],
+    "class-methods-use-this": 0,
+    "react/static-property-placement": [1, "static public field"]
+  }
+}
