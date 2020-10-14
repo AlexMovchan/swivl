@@ -1,35 +1,27 @@
-import React, { Component } from 'react';
-import { func } from 'prop-types';
-import axios from 'axios';
-import { connect } from 'react-redux';
-import Routes from './Routes';
-import { saveUsersData } from '../../redux/reducers/usersList';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
-const API_URL = 'https://api.github.com';
+import UserProfile from '../UserProfile/UserProfile';
+import NotFound from '../NotFound/NotFound';
+import UsersList from '../UsersList/UsersList';
 
-class App extends Component {
-  static propTypes = {
-    saveUsersList: func.isRequired
-  }
+const history = createBrowserHistory();
 
-  async componentDidMount() {
-    const { saveUsersList } = this.props;
-    const response = await axios.get(`${API_URL}/users`);
-    // console.log(data);
-    saveUsersList(response.data);
-  }
+const App = () => (
+  <div className="App">
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/" component={UsersList} />
+        <Route path="/user/:userName" component={UserProfile} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
+  </div>
+);
 
-  render() {
-    return (
-      <div className="App">
-        <Routes />
-      </div>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => ({
-  saveUsersList: (data) => dispatch(saveUsersData(data)),
-});
-
-export default connect(null, mapDispatchToProps)(App);
+export default App;
