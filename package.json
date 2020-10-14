@@ -21,6 +21,7 @@
     "redux": "^4.0.5",
     "serve": "^11.3.2"
   },
+  "homepage": "./",
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -34,7 +35,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://AlexMovchan.github.io/swivl",
   "browserslist": {
     "production": [
       ">0.2%",
