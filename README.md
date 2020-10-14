@@ -19,13 +19,10 @@ Source code should be available on github.com.
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 to start development server
 
-### `npm run build`
-
-to build production release
 
 ## Author
 
