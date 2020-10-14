@@ -1,3 +1,9 @@
+## Fast preview
+
+Preview of this test task on Heroku cloud platform: 
+https://swivl-test-task.herokuapp.com/
+
+
 ## Short description
 
 This is the test-task for Swivl.
